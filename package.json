@@ -1,0 +1,20 @@
+{
+  "name": "@appandflow/touchable",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AppAndFlow/react-native-touchable.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AppAndFlow/react-native-touchable.git/issues"
+  },
+  "keywords": [
+    "react-native",
+    "appandflow",
+    "react-native button",
+    "touchable"
+  ],
+  "author": "AppAndFlow",
+  "license": "MIT"
+}
