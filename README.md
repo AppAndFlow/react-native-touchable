@@ -32,7 +32,7 @@ You can disabled the touch by passing disabled true. Default false.
 
 For don't get the native effect just pass native false. By default this is true.
 
-**If pass false don't forget to pass a feedback**
+**If false don't forget to add a feedback**
 
 ## Example
 
