@@ -2,6 +2,7 @@
   "name": "@appandflow/touchable",
   "version": "0.0.1",
   "main": "./src/Touchable.js",
+  "private": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/AppAndFlow/react-native-touchable.git"
@@ -29,7 +30,8 @@
   },
   "scripts": {
     "prettier": "node ./scripts/prettier.js write",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "precommit": "lint-staged"
   },
   "devDependencies": {
     "babel-preset-react-native": "^1.9.1",
