@@ -1,6 +1,6 @@
 {
   "name": "@appandflow/touchable",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "./src/Touchable.js",
   "private": false,
   "repository": {
