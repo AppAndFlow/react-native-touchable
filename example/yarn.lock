@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@appandflow/touchable@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@appandflow/touchable/-/touchable-0.0.1.tgz#5f6c95b029b8fdae21db5d14714f713d6b34d154"
+
 "@expo/vector-icons@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@expo/vector-icons/-/vector-icons-4.0.0.tgz#df34e226b41c9f231be6d43c3190f5f7e3828773"
