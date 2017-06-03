@@ -1,5 +1,7 @@
 # @appandflow/touchable
 
+[![npm (scoped)](https://img.shields.io/npm/v/@appandflow/touchable.svg)](https://www.npmjs.com/package/@appandflow/touchable) [![Travis branch](https://img.shields.io/travis/AppAndFlow/react-native-touchable/master.svg)](https://travis-ci.org/AppAndFlow/react-native-touchable)
+
 An helper to react-native touchable element. Work with all the feedback provided by react-native and add the ripple effect for android by default.
 
 ## Why use this library?
