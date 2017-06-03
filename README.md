@@ -54,13 +54,25 @@ class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Touchable feedback="opacity" style={[styles.button, styles.opacity]} onPress={() => this._handleAlert('opacity')}>
+        <Touchable
+          feedback="opacity"
+          style={[styles.button, styles.opacity]}
+          onPress={() => this._handleAlert('opacity')}
+        >
           <Text style={styles.buttonText}>OPACITY</Text>
         </Touchable>
-        <Touchable feedback="highlight" style={[styles.button, styles.highlight]} onPress={() => this._handleAlert('highlight')}>
+        <Touchable
+          feedback="highlight"
+          style={[styles.button, styles.highlight]}
+          onPress={() => this._handleAlert('highlight')}
+        >
           <Text style={styles.buttonText}>HIGHLIGHT</Text>
         </Touchable>
-        <Touchable feedback="none" style={[styles.button, styles.none]} onPress={() => this._handleAlert('none')}>
+        <Touchable
+          feedback="none"
+          style={[styles.button, styles.none]}
+          onPress={() => this._handleAlert('none')}
+        >
           <Text style={styles.buttonText}>NONE</Text>
         </Touchable>
       </View>
