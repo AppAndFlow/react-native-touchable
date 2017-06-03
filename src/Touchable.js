@@ -42,9 +42,10 @@ export default class Touchable extends Component {
     } else if (feedback === 'opacity') {
       return <TouchableOpacity {...others} onPress={onPress} />;
     } else if (feedback === 'highlight') {
+      const { style, children, ...othersWithoutStyle } = others;
       return (
-        <TouchableHighlight onPress={onPress} {...others}>
-          <View {...others} />
+        <TouchableHighlight onPress={onPress} {...othersWithoutStyle}>
+          <View style={style}>{children}</View>
         </TouchableHighlight>
       );
     } else if (feedback === 'none') {
