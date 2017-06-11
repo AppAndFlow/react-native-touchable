@@ -15,6 +15,7 @@ type Props = {
   native?: boolean,
   overflow?: boolean,
   onPress?: () => any,
+  disabled?: boolean,
 };
 
 export default class Touchable extends Component {
@@ -25,32 +26,40 @@ export default class Touchable extends Component {
       native = true,
       overflow = false,
       onPress,
+      disabled,
       ...others
     } = this.props;
     if (native && Platform.OS === 'android' && Platform.Version >= 21) {
-      if (others.disabled) {
+      if (disabled) {
         return <View {...others} />;
       }
       return (
         <TouchableNativeFeedback
           background={TouchableNativeFeedback.Ripple(undefined, overflow)}
+          disabled={disabled}
           onPress={onPress}
         >
           <View {...others} />
         </TouchableNativeFeedback>
       );
     } else if (feedback === 'opacity') {
-      return <TouchableOpacity {...others} onPress={onPress} />;
+      return (
+        <TouchableOpacity {...others} onPress={onPress} disabled={disabled} />
+      );
     } else if (feedback === 'highlight') {
       const { style, children, ...othersWithoutStyle } = others;
       return (
-        <TouchableHighlight onPress={onPress} {...othersWithoutStyle}>
+        <TouchableHighlight
+          onPress={onPress}
+          disabled={disabled}
+          {...othersWithoutStyle}
+        >
           <View style={style}>{children}</View>
         </TouchableHighlight>
       );
     } else if (feedback === 'none') {
       return (
-        <TouchableWithoutFeedback onPress={onPress}>
+        <TouchableWithoutFeedback disabled={disabled} onPress={onPress}>
           <View {...others} />
         </TouchableWithoutFeedback>
       );

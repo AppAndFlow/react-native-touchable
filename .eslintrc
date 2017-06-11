@@ -1,6 +1,7 @@
 {
   "extends": [
     "equimper",
-    "prettier"
+    "prettier",
+    "prettier/react"
   ]
 }
