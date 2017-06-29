@@ -2,11 +2,11 @@
 
 [![npm (scoped)](https://img.shields.io/npm/v/@appandflow/touchable.svg)](https://www.npmjs.com/package/@appandflow/touchable) [![Travis branch](https://img.shields.io/travis/AppAndFlow/react-native-touchable/master.svg)](https://travis-ci.org/AppAndFlow/react-native-touchable)
 
-An helper to react-native touchable element. Work with all the feedback provided by react-native and add the ripple effect for android by default.
+A wrapper for react-native `Touchable` components to simplify the API and make the Android ripple effect work by default.
 
 ## Why use this library?
 
-Let you import only one component and don't care about the platform. Also get native feedback by default for android. Don't worry you can disabled this effect by passing `native={false}`
+It lets you import only component and forget about which platform you are using, it will default to the best behavior for the platform.
 
 ## Installation
 
@@ -15,8 +15,6 @@ Let you import only one component and don't care about the platform. Also get na
 ## Usage
 
 `import Touchable from '@appandflow/touchable';`
-
-Touchable become like a view and have access to all his props.
 
 ## Props
 
@@ -28,11 +26,11 @@ Touchable become like a view and have access to all his props.
 
 ### disabled
 
-You can disabled the touch by passing disabled true. Default false.
+You can disable the touch by passing disabled `true`. Default `false`.
 
 ### native [Android only]
 
-For don't get the native effect just pass native false. By default this is true.
+Toggle whether or not to use the ripple effects on Android. By default this is true on Android.
 
 **If false don't forget to add a feedback**
 
