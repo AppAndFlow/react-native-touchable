@@ -21,7 +21,7 @@ exports[`Touchable passes style properly with highlight feedback 1`] = `
       Object {
         "backgroundColor": "transparent",
       },
-      undefined,
+      Object {},
     ]
   }
   testID={undefined}
@@ -138,7 +138,7 @@ exports[`Touchable renders correctly with highlight feedback 1`] = `
       Object {
         "backgroundColor": "transparent",
       },
-      undefined,
+      null,
     ]
   }
   testID={undefined}
@@ -242,7 +242,7 @@ exports[`Touchable supports multiple children with highlight feedback 1`] = `
       Object {
         "backgroundColor": "transparent",
       },
-      undefined,
+      null,
     ]
   }
   testID={undefined}
