@@ -37,6 +37,9 @@ function separateStyle(style) {
   }
 
   const resolvedStyle = StyleSheet.flatten(style);
+  if (!resolvedStyle) {
+    return { inner: null, outer: null };
+  }
   const inner = {};
   const outer = {};
 
