@@ -13,7 +13,7 @@
 .*/node_modules/react-native/Libraries/EventEmitter/EmitterSubscription.js
 
 .*/node_modules/react-native-fbads/.*
-.*/node_modules/react-native/Examples/.*
+.*/node_modules/react-native/RNTester/.*
 .*/node_modules/expo/.*
 .*/node_modules/xdl/.*
 .*/node_modules/exp/.*

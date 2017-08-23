@@ -67,14 +67,13 @@ type Props = {
   tintColor?: string,
 };
 
-export default class Touchable extends Component {
+export default class Touchable extends Component<Props> {
   static defaultProps = {
     native: true,
     overflow: false,
     disabled: false,
   };
 
-  props: Props;
   render() {
     const {
       feedback,
@@ -92,6 +91,7 @@ export default class Touchable extends Component {
       }
       return (
         <TouchableNativeFeedback
+          // eslint-disable-next-line babel/new-cap
           background={TouchableNativeFeedback.Ripple(tintColor, overflow)}
           disabled={disabled}
           hitSlop={hitSlop}
@@ -120,7 +120,9 @@ export default class Touchable extends Component {
           {...othersWithoutStyle}
           style={outer}
         >
-          <View style={inner}>{children}</View>
+          <View style={inner}>
+            {children}
+          </View>
         </TouchableHighlight>
       );
     } else if (feedback === 'none') {

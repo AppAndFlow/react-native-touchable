@@ -1,10 +1,13 @@
 // @flow
 
-import React from 'react';
+import * as React from 'react';
 import { Platform, View } from 'react-native';
 import renderer from 'react-test-renderer';
 
 import Touchable from '../Touchable';
+
+// TODO: remove this when Blob is properly mocked.
+jest.mock('Blob', () => ({})).mock('URL', () => ({}));
 
 const FEEDBACKS = ['opacity', 'highlight', 'none'];
 
