@@ -62,6 +62,7 @@ type Props = {
   native?: boolean,
   overflow?: boolean,
   onPress?: () => any,
+  onLongPress?: () => any,
   disabled?: boolean,
   hitSlop?: { top?: number, bottom?: number, left?: number, right?: number },
   tintColor?: string,
@@ -80,6 +81,7 @@ export default class Touchable extends Component<Props> {
       native,
       overflow,
       onPress,
+      onLongPress,
       disabled,
       hitSlop,
       tintColor,
@@ -96,6 +98,7 @@ export default class Touchable extends Component<Props> {
           disabled={disabled}
           hitSlop={hitSlop}
           onPress={onPress}
+          onLongPress={onLongPress}
         >
           <View {...others} />
         </TouchableNativeFeedback>
@@ -105,6 +108,7 @@ export default class Touchable extends Component<Props> {
         <TouchableOpacity
           {...others}
           onPress={onPress}
+          onLongPress={onLongPress}
           disabled={disabled}
           hitSlop={hitSlop}
         />
@@ -115,6 +119,7 @@ export default class Touchable extends Component<Props> {
       return (
         <TouchableHighlight
           onPress={onPress}
+          onLongPress={onLongPress}
           disabled={disabled}
           hitSlop={hitSlop}
           {...othersWithoutStyle}
@@ -131,6 +136,7 @@ export default class Touchable extends Component<Props> {
           disabled={disabled}
           hitSlop={hitSlop}
           onPress={onPress}
+          onLongPress={onLongPress}
         >
           <View {...others} />
         </TouchableWithoutFeedback>
