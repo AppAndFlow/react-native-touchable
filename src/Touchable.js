@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Component } from 'react';
+import * as React from 'react';
 import {
   Platform,
   TouchableOpacity,
@@ -66,9 +66,11 @@ type Props = {
   disabled?: boolean,
   hitSlop?: { top?: number, bottom?: number, left?: number, right?: number },
   tintColor?: string,
+  style?: any,
+  children?: React.Node,
 };
 
-export default class Touchable extends Component<Props> {
+export default class Touchable extends React.Component<Props> {
   static defaultProps = {
     native: true,
     overflow: false,
