@@ -2,7 +2,7 @@
 
 [![npm (scoped)](https://img.shields.io/npm/v/@appandflow/touchable.svg)](https://www.npmjs.com/package/@appandflow/touchable) [![Travis branch](https://img.shields.io/travis/AppAndFlow/react-native-touchable/master.svg)](https://travis-ci.org/AppAndFlow/react-native-touchable)
 
-A wrapper for react-native `Touchable` components to simplify the API and make the Android ripple effect work by default. Based on react-native-gesture-handler.
+A wrapper for react-native `Touchable` components to simplify the API and make the Android ripple effect work by default. Based on [react-native-gesture-handler](https://github.com/kmagiera/react-native-gesture-handler).
 
 ## Why use this library?
 
