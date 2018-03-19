@@ -1,6 +1,6 @@
 {
   "name": "@appandflow/touchable",
-  "version": "1.2.2",
+  "version": "2.0.0",
   "main": "./src/Touchable.js",
   "private": false,
   "repository": {
@@ -10,16 +10,29 @@
   "bugs": {
     "url": "https://github.com/AppAndFlow/react-native-touchable.git/issues"
   },
-  "keywords": ["react-native", "appandflow", "button", "touchable"],
+  "keywords": [
+    "react-native",
+    "appandflow",
+    "button",
+    "touchable"
+  ],
   "author": "AppAndFlow",
   "license": "MIT",
-  "files": ["/src", "index.js"],
+  "files": [
+    "/src",
+    "index.js"
+  ],
   "lint-staged": {
-    "*.js": ["yarn prettier", "git add"]
+    "*.js": [
+      "yarn prettier",
+      "git add"
+    ]
   },
   "jest": {
     "preset": "react-native",
-    "modulePathIgnorePatterns": ["example"],
+    "modulePathIgnorePatterns": [
+      "example"
+    ],
     "transformIgnorePatterns": [
       "node_modules/(?!(react-native|react-native-gesture-handler)/)"
     ]
