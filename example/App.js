@@ -1,59 +1,14 @@
-import Expo from 'expo';
+// @noflow
+
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Alert, Platform } from 'react-native';
+import { StyleSheet, Text, View, Alert } from 'react-native';
 import Touchable from '@appandflow/touchable';
 
-const isAndroid = Platform.OS === 'android';
-
-class App extends Component {
+export default class App extends Component {
   _handleAlert = feedback => {
-    Alert.alert(`You touch the feedback: ${feedback}`);
+    Alert.alert(`You touched the button with feedback: ${feedback}`);
   };
   render() {
-    if (isAndroid) {
-      return (
-        <View style={styles.container}>
-          <Text style={styles.androidOnlyText}>Android Only</Text>
-          <Touchable
-            native={false}
-            feedback="opacity"
-            style={[styles.button, styles.opacity]}
-            onPress={() => this._handleAlert('native false with opacity')}
-          >
-            <Text style={styles.buttonText}>OPACITY</Text>
-          </Touchable>
-          <Touchable
-            feedback="highlight"
-            native={false}
-            style={[styles.button, styles.highlight]}
-            onPress={() => this._handleAlert('native fals with highlight')}
-          >
-            <Text style={styles.buttonText}>HIGHLIGHT</Text>
-          </Touchable>
-          <Touchable
-            feedback="none"
-            style={[styles.button, styles.none]}
-            onPress={() => this._handleAlert('native false with none')}
-          >
-            <Text style={styles.buttonText}>NONE</Text>
-          </Touchable>
-          <Touchable
-            feedback="opacity"
-            disabled
-            style={[styles.button, styles.disabled]}
-            onPress={() => this._handleAlert('disabled')}
-          >
-            <Text style={styles.buttonText}>DISABLED</Text>
-          </Touchable>
-          <Touchable
-            style={[styles.button, styles.notDisabled]}
-            onPress={() => this._handleAlert('native not disabled')}
-          >
-            <Text style={styles.buttonText}>NATIVE NOT DISABLED</Text>
-          </Touchable>
-        </View>
-      );
-    }
     return (
       <View style={styles.container}>
         <Touchable
@@ -141,5 +96,3 @@ const styles = StyleSheet.create({
     backgroundColor: 'purple',
   },
 });
-
-Expo.registerRootComponent(App);

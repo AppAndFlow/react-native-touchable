@@ -2,72 +2,23 @@
 
 import * as React from 'react';
 import {
-  Platform,
-  TouchableOpacity,
-  TouchableHighlight,
-  TouchableWithoutFeedback,
-  TouchableNativeFeedback,
-  View,
-  StyleSheet,
-} from 'react-native';
-
-// Touchable highlight is tricky and certain style props must be included
-// either on the Touchable component or the inner container view. Some must also
-// be included on both.
-const OUTER_VIEW_KEYS = new Set([
-  'margin',
-  'marginHorizontal',
-  'marginVertical',
-  'marginLeft',
-  'marginRight',
-  'marginTop',
-  'marginBottom',
-]);
-const BOTH_VIEW_KEYS = new Set([
-  'borderRadius',
-  'borderTopLeftRadius',
-  'borderTopRightRadius',
-  'borderBottomLeftRadius',
-  'borderBottomRightRadius',
-]);
-
-function separateStyle(style) {
-  if (!style) {
-    return { inner: style, outer: null };
-  }
-
-  const resolvedStyle = StyleSheet.flatten(style);
-  if (!resolvedStyle) {
-    return { inner: null, outer: null };
-  }
-  const inner = {};
-  const outer = {};
-
-  Object.keys(resolvedStyle).forEach(key => {
-    if (BOTH_VIEW_KEYS.has(key)) {
-      outer[key] = resolvedStyle[key];
-      inner[key] = resolvedStyle[key];
-    } else if (OUTER_VIEW_KEYS.has(key)) {
-      outer[key] = resolvedStyle[key];
-    } else {
-      inner[key] = resolvedStyle[key];
-    }
-  });
-
-  return { inner, outer };
-}
+  BaseButton,
+  RectButton,
+  BorderlessButton,
+} from 'react-native-gesture-handler';
 
 type Props = {
   feedback: 'opacity' | 'highlight' | 'none',
-  native?: boolean,
+  // Not currently supported.
+  // native?: boolean,
   overflow?: boolean,
   onPress?: () => any,
-  onLongPress?: () => any,
   disabled?: boolean,
   hitSlop?: { top?: number, bottom?: number, left?: number, right?: number },
-  tintColor?: string,
   style?: any,
   children?: React.Node,
+  activeOpacity?: number,
+  underlayColor?: string,
 };
 
 export default class Touchable extends React.Component<Props> {
@@ -80,68 +31,43 @@ export default class Touchable extends React.Component<Props> {
   render() {
     const {
       feedback,
-      native,
       overflow,
       onPress,
-      onLongPress,
       disabled,
       hitSlop,
-      tintColor,
+      activeOpacity,
+      underlayColor,
       ...others
     } = this.props;
-    if (native && Platform.OS === 'android' && Platform.Version >= 21) {
-      if (disabled) {
-        return <View {...others} />;
-      }
+    if (feedback === 'opacity') {
       return (
-        <TouchableNativeFeedback
-          // eslint-disable-next-line babel/new-cap
-          background={TouchableNativeFeedback.Ripple(tintColor, overflow)}
-          disabled={disabled}
-          hitSlop={hitSlop}
-          onPress={onPress}
-          onLongPress={onLongPress}
-        >
-          <View {...others} />
-        </TouchableNativeFeedback>
-      );
-    } else if (feedback === 'opacity') {
-      return (
-        <TouchableOpacity
+        <BorderlessButton
           {...others}
           onPress={onPress}
-          onLongPress={onLongPress}
-          disabled={disabled}
+          enabled={!disabled}
           hitSlop={hitSlop}
+          borderless={overflow}
+          activeOpacity={activeOpacity}
         />
       );
     } else if (feedback === 'highlight') {
-      const { style, children, ...othersWithoutStyle } = others;
-      const { inner, outer } = separateStyle(style);
       return (
-        <TouchableHighlight
+        <RectButton
+          {...others}
           onPress={onPress}
-          onLongPress={onLongPress}
-          disabled={disabled}
+          enabled={!disabled}
           hitSlop={hitSlop}
-          {...othersWithoutStyle}
-          style={outer}
-        >
-          <View style={inner}>
-            {children}
-          </View>
-        </TouchableHighlight>
+          underlayColor={underlayColor}
+        />
       );
     } else if (feedback === 'none') {
       return (
-        <TouchableWithoutFeedback
-          disabled={disabled}
+        <BaseButton
+          enabled={!disabled}
           hitSlop={hitSlop}
           onPress={onPress}
-          onLongPress={onLongPress}
-        >
-          <View {...others} />
-        </TouchableWithoutFeedback>
+          {...others}
+        />
       );
     }
     throw new Error('Invalid feedback type');

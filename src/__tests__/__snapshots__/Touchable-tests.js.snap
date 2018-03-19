@@ -1,353 +1,174 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Touchable passes style properly with highlight feedback 1`] = `
-<View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
-  accessible={true}
-  hasTVPreferredFocus={undefined}
+<RectButton
+  enabled={true}
   hitSlop={undefined}
-  isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
+  native={true}
+  onPress={undefined}
   style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-      },
-      Object {},
-    ]
-  }
-  testID={undefined}
-  tvParallaxProperties={undefined}
->
-  <View
-    style={
-      Object {
-        "flex": 1,
-      }
+    Object {
+      "flex": 1,
     }
-  >
-    <View />
-  </View>
-</View>
+  }
+  underlayColor={undefined}
+>
+  <View />
+</RectButton>
 `;
 
 exports[`Touchable passes style properly with native feedback 1`] = `
-<View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
-  accessible={true}
+<BaseButton
+  enabled={true}
   hitSlop={undefined}
-  nativeID={undefined}
-  onLayout={undefined}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
+  native={true}
+  onPress={undefined}
   style={
     Object {
       "flex": 1,
     }
   }
-  testID={undefined}
 >
   <View />
-</View>
+</BaseButton>
 `;
 
 exports[`Touchable passes style properly with none feedback 1`] = `
-<View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
-  accessible={true}
+<BaseButton
+  enabled={true}
   hitSlop={undefined}
-  nativeID={undefined}
-  onLayout={undefined}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
+  native={true}
+  onPress={undefined}
   style={
     Object {
       "flex": 1,
     }
   }
-  testID={undefined}
 >
   <View />
-</View>
+</BaseButton>
 `;
 
 exports[`Touchable passes style properly with opacity feedback 1`] = `
-<View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
-  accessible={true}
-  collapsable={undefined}
+<BorderlessButton
+  activeOpacity={undefined}
+  borderless={false}
+  enabled={true}
   hitSlop={undefined}
-  isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
+  native={true}
+  onPress={undefined}
   style={
     Object {
       "flex": 1,
-      "opacity": 1,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View />
-</View>
+</BorderlessButton>
 `;
 
 exports[`Touchable renders correctly with highlight feedback 1`] = `
-<View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
-  accessible={true}
-  hasTVPreferredFocus={undefined}
+<RectButton
+  enabled={true}
   hitSlop={undefined}
-  isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-      },
-      null,
-    ]
-  }
-  testID={undefined}
-  tvParallaxProperties={undefined}
+  native={true}
+  onPress={undefined}
+  underlayColor={undefined}
 >
-  <View
-    style={undefined}
-  >
-    <View />
-  </View>
-</View>
+  <View />
+</RectButton>
 `;
 
 exports[`Touchable renders correctly with native feedback 1`] = `
-<View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
-  accessible={true}
+<BaseButton
+  enabled={true}
   hitSlop={undefined}
-  nativeID={undefined}
-  onLayout={undefined}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={undefined}
-  testID={undefined}
+  native={true}
+  onPress={undefined}
 >
   <View />
-</View>
+</BaseButton>
 `;
 
 exports[`Touchable renders correctly with none feedback 1`] = `
-<View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
-  accessible={true}
+<BaseButton
+  enabled={true}
   hitSlop={undefined}
-  nativeID={undefined}
-  onLayout={undefined}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={undefined}
-  testID={undefined}
+  native={true}
+  onPress={undefined}
 >
   <View />
-</View>
+</BaseButton>
 `;
 
 exports[`Touchable renders correctly with opacity feedback 1`] = `
-<View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
-  accessible={true}
-  collapsable={undefined}
+<BorderlessButton
+  activeOpacity={undefined}
+  borderless={false}
+  enabled={true}
   hitSlop={undefined}
-  isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
-  testID={undefined}
-  tvParallaxProperties={undefined}
+  native={true}
+  onPress={undefined}
 >
   <View />
-</View>
+</BorderlessButton>
 `;
 
 exports[`Touchable supports multiple children with highlight feedback 1`] = `
-<View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
-  accessible={true}
-  hasTVPreferredFocus={undefined}
+<RectButton
+  enabled={true}
   hitSlop={undefined}
-  isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-      },
-      null,
-    ]
-  }
-  testID={undefined}
-  tvParallaxProperties={undefined}
+  native={true}
+  onPress={undefined}
+  underlayColor={undefined}
 >
-  <View
-    style={undefined}
-  >
-    <View />
-    <View />
-    <View />
-    <View />
-  </View>
-</View>
+  <View />
+  <View />
+  <View />
+  <View />
+</RectButton>
 `;
 
 exports[`Touchable supports multiple children with native feedback 1`] = `
-<View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
-  accessible={true}
+<BaseButton
+  enabled={true}
   hitSlop={undefined}
-  nativeID={undefined}
-  onLayout={undefined}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={undefined}
-  testID={undefined}
+  native={true}
+  onPress={undefined}
 >
   <View />
   <View />
   <View />
   <View />
-</View>
+</BaseButton>
 `;
 
 exports[`Touchable supports multiple children with none feedback 1`] = `
-<View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
-  accessible={true}
+<BaseButton
+  enabled={true}
   hitSlop={undefined}
-  nativeID={undefined}
-  onLayout={undefined}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={undefined}
-  testID={undefined}
+  native={true}
+  onPress={undefined}
 >
   <View />
   <View />
   <View />
   <View />
-</View>
+</BaseButton>
 `;
 
 exports[`Touchable supports multiple children with opacity feedback 1`] = `
-<View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
-  accessible={true}
-  collapsable={undefined}
+<BorderlessButton
+  activeOpacity={undefined}
+  borderless={false}
+  enabled={true}
   hitSlop={undefined}
-  isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
-  testID={undefined}
-  tvParallaxProperties={undefined}
+  native={true}
+  onPress={undefined}
 >
   <View />
   <View />
   <View />
   <View />
-</View>
+</BorderlessButton>
 `;

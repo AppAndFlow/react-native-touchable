@@ -6,8 +6,11 @@ import renderer from 'react-test-renderer';
 
 import Touchable from '../Touchable';
 
-// TODO: remove this when Blob is properly mocked.
-jest.mock('Blob', () => ({})).mock('URL', () => ({}));
+jest.mock('react-native-gesture-handler', () => ({
+  BaseButton: 'BaseButton',
+  BorderlessButton: 'BorderlessButton',
+  RectButton: 'RectButton',
+}));
 
 const FEEDBACKS = ['opacity', 'highlight', 'none'];
 
